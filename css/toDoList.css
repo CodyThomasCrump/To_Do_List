@@ -4,7 +4,7 @@ body {
     font-family: 'Inconsolata', monospace;
 }
 
-/* Applies to the main page heading text*/
+/* Applies to the main page heading text */
 
 h1 {
     color: #007bff;
@@ -33,23 +33,76 @@ input {
     min-width: 65%; /* This element's width must be at least 65% of the width of the container */
 }
 
-/* Stlyes for the submit button */
+/* Styles for the submit button */
 
 #submit {
     background-color: #007bff;
     border: none;
     /* Allows us to add a delay before the animation starts */
     transition-delay: 0s;
-    /* allows us to control how long the animation takes */
+    /* Allows us to control how long the animation takes */
     transition-duration: 5s;
-    /* Allows us to specify what property will be animated for the transion */
+    /* Allows us to specify what property will be animated for the transition */
     transition-property: background-color;
-    /* Allows us to modify the speed of the animation, such as starting out slow and then spedding up */
+    /* Allows us to modify the speed of the animation, such as starting out slow and then speeding up */
     transition-timing-function: ease-in-out;
 
-    transition: backgroung-color 1.5s ease 1s; /* We can use shorthand to specify all of the transion properties in one line - property, duration, timing-function, delay */
+    transition: background-color 1.5s ease 1s; /* We can use shorthand to specify all of the transition properties in one line - property, duration, timing-function, delay */
 }
 
 #submit:hover {
     background-color: purple;
+}
+
+/* Styles for the ul and lis */
+
+ul {
+    margin-top: 20px;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: #003ffc;
+    font-weight: bold;
+
+    transition: all 0.75s ease;
+    /* Webkit, for Safari and Opera */
+    -webkit-transition: all 0.75s ease;
+    /* Mozilla, for Firefox */
+    -moz-transition: all 0.75s ease;
+    /* Opera */
+    -o-transition: all 0.75s ease;
+}
+
+li:hover {
+    background-color: #3292d1;
+}
+
+/* Styles for when a list item is marked done */
+
+.done {
+    background-color: #40f756 !important;
+}
+
+/* Styles for when a list item is deleted */
+
+.delete {
+    display: none;
+}
+
+/* Styles for the delete button inside the list items */
+
+/* Target any buttons whose parent element is a list item */
+
+li > button {
+    float: right;
+    border: none;
+    background: none;
+    color: white;
 }
